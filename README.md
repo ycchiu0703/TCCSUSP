@@ -33,3 +33,13 @@ We believe that there is an obvious consideration relationship between the three
   5. When 'Under 30' == "No' and 'Senior Citizen' == "No" and 'Age' is a missing value, add the missing value: 65 > 'Age' >= 30 mean
   6. After the above complements 1~5, all the remaining missing values of 'Age' will be filled up: the mean of all 'Age' is calculated to be about 46.67527672739572
   7. Since 65 > all mean of 'Age' >= 30, the corresponding missing values of 'Under 30' and 'Senior Citizen' are filled with "No"
+
+### Feature Importance of Xgboost
+
+* 'Population' has a significant impact on the prediction of xgboost. In fact, after repeatedly filling in the missing values and adjusting the model, the importance of 'Population' still remains in the first position, which shows that 'Population' has a great influence on the prediction of xgboost
+* The importance of 'City' for xgboost prediction is also in the top ten. After repeated filling and model adjustment, 'City' still has a certain degree of influence
+* Although the two Features 'Country' and 'State' are not as important to xgboost prediction as 'Population' and 'City', they are still on the list. We believe that perfecting the missing values of these two Features will allow xgboost to give more accurate prediction results.
+* Therefore, we decided to try to use other Features to fill the gaps of the above features. It can be inferred that 'Country', 'State', 'City' and 'Population' can basically be obtained from 'Zip Code' or 'Lat' Long' to get the corresponding information. At the same time, we found that we can get the corresponding 'Zip Code' from 'Lat Long' to make it more complete, so as to fill in the missing values of other features.
+
+
+
