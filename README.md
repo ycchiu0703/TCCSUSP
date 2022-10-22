@@ -8,7 +8,7 @@
 3. In Train, the proportion of the final classification is seriously biased.
 
 <!-- ![images](https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Data%20distribution.jpg) -->
-<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Data%20distribution.jpg" width="70%" height="70%">
+<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Data%20distribution.jpg" width="50%" height="50%">
 
 4. All data are distributed on the West Coast of the United States.
 
