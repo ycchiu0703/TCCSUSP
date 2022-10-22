@@ -62,3 +62,12 @@ We believe that there is an obvious consideration relationship between the three
 * In fact, the conversion method of [geopy](https://geopy.readthedocs.io/en/stable/) can also use 'Lat Long' to convert the corresponding 'State', 'City' and 'Population'
   * We also considered the solution of using 'Lat Long' to complement the value, but because even after using 'Lat Long' to complete the value, we still need to use 'Zip Code' to complete the value.
 * As a result, the number of values filled by the two schemes is almost the same, but it is too time-consuming to use 'Lat Long' to convert compared to 'Zip Code' (you need to use the browser to find the information corresponding to 'Lat Long' every time. ), so we finally chose to convert with 'Zip Code'.
+
+### Feature 2 ：Gender 
+* We experimented with two ways of Encoding, namely "Frequency Endcoing" and "Label Endcoing", and found that "Label Endcoing" has more significant results for xgboost than "Frequency Endcoing".
+* Therefore, in the selection of the best solution, we are more inclined to use "Label Endcoing" for 'Gender'.
+
+### Feature 6~7: Dependents, Number of Dependents 
+* We first fill the empty value of "Number of Dependents" with 0, then if "Number of Dependents" is greater than zero, then fill in "Yes" for Dependents, and finally perform label encoding to convert Yes to 1, and No to 0.
+
+
