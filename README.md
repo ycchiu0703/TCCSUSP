@@ -16,8 +16,8 @@
 
 5. From the heat map of each category, there are many categories in Los Angeles, but because Los Angeles is originally a densely populated area, it is normal.
 
-![images](https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Each_Category_Heatmap.jpg)
-
+<!-- ![images](https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Each_Category_Heatmap.jpg) -->
+<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Each_Category_Heatmap.jpg" width="50%" height="50%">
 ## Feature Engineering
 
 ### Feature 3~5： Age, Under 30, Senior Citizen
