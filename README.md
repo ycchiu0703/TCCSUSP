@@ -75,5 +75,5 @@ We believe that there is an obvious consideration relationship between the three
 
 <!-- ![images](https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_1.jpg)
 ![images](https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_2.jpg) -->
-<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_1.jpg" width="50%" height="50%">
-<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_2.jpg" width="50%" height="50%">
+<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_1.jpg" width="70%" height="70%">
+<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_2.jpg" width="70%" height="70%">
