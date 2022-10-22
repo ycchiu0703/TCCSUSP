@@ -41,5 +41,8 @@ We believe that there is an obvious consideration relationship between the three
 * Although the two Features 'Country' and 'State' are not as important to xgboost prediction as 'Population' and 'City', they are still on the list. We believe that perfecting the missing values of these two Features will allow xgboost to give more accurate prediction results.
 * Therefore, we decided to try to use other Features to fill the gaps of the above features. It can be inferred that 'Country', 'State', 'City' and 'Population' can basically be obtained from 'Zip Code' or 'Lat' Long' to get the corresponding information. At the same time, we found that we can get the corresponding 'Zip Code' from 'Lat Long' to make it more complete, so as to fill in the missing values of other features.
 
+### Feature 12~14： Lat Long, Latitude, Longitude
+* After first observing the feature of 'Lat Long', it is found that the content is (Lat, Long), where "Lat" is the longitude and "Long" is the latitude. At the same time, 'Latitude' and 'Longitude' are exactly the corresponding longitude and latitude. Therefore, we use this property to complement the 'Lat Long' row:
+  * When both 'Latitude' and 'Longitude' have values and 'Lat Long' is missing, use ('Latitude', 'Longitude') to complement 'Lat Long'
 
 
