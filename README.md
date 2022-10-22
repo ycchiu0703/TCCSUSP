@@ -19,11 +19,17 @@
 
 ## Feature Engineering
 
-### 1. Feature 3~5： Age, Under 30, Senior Citizen
+### Feature 3~5： Age, Under 30, Senior Citizen
 
 We believe that there is an obvious consideration relationship between the three features of 'Age', 'Under 30' and 'Senior Citizen', such as:
 
-i. If 'Age' < 30, 'Under 30' should be "Yes" and 'Senior Citizen' should be "No"
-ii. If 65 > 'Age' >= 30, then 'Under 30' should be "No", and 'Senior Citizen' should also be "No"
-iii. If 'Age' >= 65 , then 'Under 30' should be "No", and 'Senior Citizen' should be "Yes" After observation, we found that 'Age', 'Under 30', 'Senior Citizen' three The features all have missing parts of each other, so we use the above features to make up the value:
-  i.
+* If 'Age' < 30, 'Under 30' should be "Yes" and 'Senior Citizen' should be "No"
+* If 65 > 'Age' >= 30, then 'Under 30' should be "No", and 'Senior Citizen' should also be "No"
+* If 'Age' >= 65 , then 'Under 30' should be "No", and 'Senior Citizen' should be "Yes" After observation, we found that 'Age', 'Under 30', 'Senior Citizen' three The features all have missing parts of each other, so we use the above features to make up the value:
+  1. When 'Age' < 30 and 'Under 30' is a missing value, fill in the missing value: "Yes"
+  2. When 'Age' >= 65 and 'Senior Citizen' is a missing value, fill in the missing value: "Yes"
+  3. When 'Under 30' == "Yes" and 'Age' is a missing value, fill in the missing value: the mean of 'Age' < 30
+  4. When 'Senior Citizen' == 'Yes' and 'Age' is a missing value, fill in the missing value: the mean of 'Age' >= 65
+  5. When 'Under 30' == "No' and 'Senior Citizen' == "No" and 'Age' is a missing value, add the missing value: 65 > 'Age' >= 30 mean
+  6. After the above complements 1~5, all the remaining missing values of 'Age' will be filled up: the mean of all 'Age' is calculated to be about 46.67527672739572
+  7. Since 65 > all mean of 'Age' >= 30, the corresponding missing values of 'Under 30' and 'Senior Citizen' are filled with "No"
