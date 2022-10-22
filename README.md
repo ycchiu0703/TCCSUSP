@@ -47,7 +47,8 @@ We believe that there is an obvious consideration relationship between the three
 
 ### Feature 11： Zip Code
 
-We use the suite [geopy](https://geopy.readthedocs.io/en/stable/) to convert the Zip Code corresponding to 'Lat Long' and use it to complement: When 'Lat Long' has a value and 'Zip Code' is missing, use the Zip Code converted from 'Lat Long' to 'Zip Code' for complement
+* We use [geopy](https://geopy.readthedocs.io/en/stable/) to convert the Zip Code corresponding to 'Lat Long' and use it to complement: 
+ * When 'Lat Long' has a value and 'Zip Code' is missing, use the Zip Code converted from 'Lat Long' to 'Zip Code' for complement
 
-
-
+### Feature 8： Country
+When using the package converted by 'Zip Code', we found that there is no conversion of 'Country', so we use 'Lat Long' to convert the corresponding 'Country' and use it to complement:
