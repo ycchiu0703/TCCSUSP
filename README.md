@@ -71,4 +71,8 @@ We believe that there is an obvious consideration relationship between the three
 ### Feature 6~7: Dependents, Number of Dependents 
 * We first fill the empty value of "Number of Dependents" with 0, then if "Number of Dependents" is greater than zero, then fill in "Yes" for Dependents, and finally perform label encoding to convert Yes to 1, and No to 0.
 
+### The Method of Endcoing and Complement Value of Each Feature
+
+![images](https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_1.jpg)
+![images](https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Endcoing_2.jpg)
 
