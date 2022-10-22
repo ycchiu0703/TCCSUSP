@@ -86,6 +86,7 @@ We believe that there is an obvious consideration relationship between the three
 <img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Feature_Importance.jpg" width="50%" height="50%">
 
 * When we only select the top 13 important features as training data, the Accurcy is the lowest, and when we select all the features as the training data, the Accurcy can be the highest.
-
+* Such results are related to the characteristics of the model, because xgboost can get better results for more complex data.
+* But if we use the Linear Base model, we may have different results,because too many features can make the linear model harder to learn.
 
 
