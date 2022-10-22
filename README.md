@@ -83,7 +83,7 @@ We believe that there is an obvious consideration relationship between the three
 
 * We use xgboost to judge the importance of features to choose which features to use.
 
-<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Feature_Importance.jpg" width="70%" height="70%">
+<img src="https://github.com/ycchiu0703/Telephone-Company-Customers-Stop-Using-Service-Prediction/blob/main/images/Feature_Importance.jpg" width="50%" height="50%">
 
 * When we only select the top 13 important features as training data, the Accurcy is the lowest, and when we select all the features as the training data, the Accurcy can be the highest.
 
