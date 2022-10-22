@@ -26,13 +26,13 @@ We believe that there is an obvious consideration relationship between the three
 * If 'Age' < 30, 'Under 30' should be "Yes" and 'Senior Citizen' should be "No"
 * If 65 > 'Age' >= 30, then 'Under 30' should be "No", and 'Senior Citizen' should also be "No"
 * If 'Age' >= 65 , then 'Under 30' should be "No", and 'Senior Citizen' should be "Yes" After observation, we found that 'Age', 'Under 30', 'Senior Citizen' three The features all have missing parts of each other, so we use the above features to make up the value:
-  1. When 'Age' < 30 and 'Under 30' is a missing value, fill in the missing value: "Yes"
-  2. When 'Age' >= 65 and 'Senior Citizen' is a missing value, fill in the missing value: "Yes"
-  3. When 'Under 30' == "Yes" and 'Age' is a missing value, fill in the missing value: the mean of 'Age' < 30
-  4. When 'Senior Citizen' == 'Yes' and 'Age' is a missing value, fill in the missing value: the mean of 'Age' >= 65
-  5. When 'Under 30' == "No' and 'Senior Citizen' == "No" and 'Age' is a missing value, add the missing value: 65 > 'Age' >= 30 mean
-  6. After the above complements 1~5, all the remaining missing values of 'Age' will be filled up: the mean of all 'Age' is calculated to be about 46.67527672739572
-  7. Since 65 > all mean of 'Age' >= 30, the corresponding missing values of 'Under 30' and 'Senior Citizen' are filled with "No"
+  * When 'Age' < 30 and 'Under 30' is a missing value, fill in the missing value: "Yes"
+  * When 'Age' >= 65 and 'Senior Citizen' is a missing value, fill in the missing value: "Yes"
+  * When 'Under 30' == "Yes" and 'Age' is a missing value, fill in the missing value: the mean of 'Age' < 30
+  * When 'Senior Citizen' == 'Yes' and 'Age' is a missing value, fill in the missing value: the mean of 'Age' >= 65
+  * When 'Under 30' == "No' and 'Senior Citizen' == "No" and 'Age' is a missing value, add the missing value: 65 > 'Age' >= 30 mean
+  * After the above complements 1~5, all the remaining missing values of 'Age' will be filled up: the mean of all 'Age' is calculated to be about 46.67527672739572
+  * Since 65 > all mean of 'Age' >= 30, the corresponding missing values of 'Under 30' and 'Senior Citizen' are filled with "No"
 
 ### Feature Importance of Xgboost
 
@@ -44,5 +44,10 @@ We believe that there is an obvious consideration relationship between the three
 ### Feature 12~14： Lat Long, Latitude, Longitude
 * After first observing the feature of 'Lat Long', it is found that the content is (Lat, Long), where "Lat" is the longitude and "Long" is the latitude. At the same time, 'Latitude' and 'Longitude' are exactly the corresponding longitude and latitude. Therefore, we use this property to complement the 'Lat Long' row:
   * When both 'Latitude' and 'Longitude' have values and 'Lat Long' is missing, use ('Latitude', 'Longitude') to complement 'Lat Long'
+
+### Feature 11： Zip Code
+
+We use the suite [geopy](https://geopy.readthedocs.io/en/stable/) to convert the Zip Code corresponding to 'Lat Long' and use it to complement: When 'Lat Long' has a value and 'Zip Code' is missing, use the Zip Code converted from 'Lat Long' to 'Zip Code' for complement
+
 
 
